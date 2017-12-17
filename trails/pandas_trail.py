@@ -3,7 +3,7 @@ import pandas as pd
 #extracting the csv file as data frame
 df = pd.read_csv('diamonds.csv', delimiter=',')
 
-'''diamonds.csv is a data frame and we are trying to extract the data of all the diamonds having 'Ideal' cut'''
+'''diamonds.csv is a data frame and we are trying to extract the data of all the diamonds having 'Ideal' cut and remove other tuples which doesn't have the ideal cut'''
 
 
 Ideal_cut = df.where(df['cut']=='Ideal').dropna(thresh=2)
